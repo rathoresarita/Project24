@@ -1,22 +1,34 @@
-import { Button } from '@chakra-ui/react'
+// App.jsx
+import React from 'react';
+import { auth } from './firebase/firebase'
+import { Routes, Route, Navigate } from 'react-router-dom';
+import HomePage from './pages/HomePage'
+import AuthPage from './pages/AuthPage/AuthPage'
+import { PageLayout } from './Layouts/PageLayout/PageLayout';
+import ProfilePage from './pages/ProfilePage/ProfilePage'
+import useAuthStore from './store/authStore'
+import { useAuthState } from 'react-firebase-hooks/auth'
 
-import { extendTheme } from '@chakra-ui/react'
-import { Routes,Route} from 'react-router-dom'
-import { HomePage } from './pages/HomePage'
 function App() {
-  // const [count, setCount] = useState(0)
+  // const authUser = useAuthStore(state => state.user)
+  // const authUser = useAuthStore(state => state.user)
 
+  //more safe to check uthentication from firebase
+
+  const [authUser, loading] = useAuthState(auth)
   return (
-    <>
-     <Routes>
-      <Route path='/' element ={<HomePage/>}></Route>
-      {/* <Route path='/auth' element ={<AuthPage/>}></Route> */}
+    <PageLayout>
 
-     </Routes>
+      <Routes>
+        <Route path="/" element={authUser ? <HomePage /> : <Navigate to='/auth' />} />
+        <Route path="/auth" element={!authUser ? <AuthPage /> : <Navigate to='/' />}></Route>
+        <Route path='/:username' element={<ProfilePage />}></Route>
+
+      </Routes>
+    </PageLayout>
 
 
-    </>
-  )
+  );
 }
 
-export default App
+export default App;
