@@ -1,0 +1,62 @@
+.app-wrapper {
+    background-color: gray;
+    margin-left: -8px;
+    margin-right: -8px;
+
+}
+
+.app {
+    display: flex;
+    margin-left: 33%;
+    align-items: center;
+
+    height: 100px;
+
+    /* Center items horizontally */
+}
+
+#name {
+    height: 40px;
+    width: 250px;
+    border-radius: 10px;
+  
+}
+
+#des {
+    height: 40px;
+    width: 250px;
+    border-radius: 10px;
+}
+
+#add {
+    margin-left: 10px;
+    width: 80px;
+    height: 40px;
+    margin-top: 5px;
+    border-radius: 5px;
+    background-color: green;
+
+
+}
+
+.input-container {
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+ 
+
+
+    margin-bottom: 10px;
+    align-items: center;
+    /* Add space between input containers */
+}
+
+
+
+
+.input-container label {
+
+
+    color: white;
+    /* color: white; */
+}

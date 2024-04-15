@@ -1,0 +1,76 @@
+/* list.css */
+.list {
+    width: 100%;
+    /* Ensure full width of the container */
+}
+
+.todoList {
+    background-color: gainsboro;
+    border-radius: 19px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    margin-left: 176px;
+    margin-right: 154px;
+    padding-left: 318px;
+    margin-top: 10px;
+    padding-right: 273px;
+    font-size: 15px;
+    border-bottom: 5px solid #100c0c;
+}
+
+.listName {
+    flex: 2;
+    /* Take 2/5 of the space */
+    font-size: 30px;
+  
+}
+
+.listDescription {
+    flex: 3;
+    /* Take 3/5 of the space */
+    font-size: 15px;
+}
+
+.listButtons {
+    flex: 1;
+    border-radius: 3px;
+    /* Take 1/5 of the space */
+    display: flex;
+    justify-content: flex-end;
+    /* Align buttons to the right */
+    gap: 5px;
+    /* Add gap between buttons */
+}
+
+.button1,
+.button2 {
+    padding: 5px 10px;
+    /* Add padding to buttons */
+    background-color: #4CAF50;
+    /* Green */
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.button1:hover,
+.button2:hover {
+    background-color: #45a049;
+    /* Darker green on hover */
+}
+
+.button2 {
+    background-color: #f44336;
+    /* Red */
+}
+
+.button2:hover {
+    background-color: #d32f2f;
+    /* Darker red on hover */
+}
