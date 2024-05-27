@@ -1,0 +1,45 @@
+/* Sidebar.css */
+
+.sidebar {
+    height: 200vh;
+    width: 20%;
+    margin-top: -8px;
+    background-color:beige;
+    padding-top: 20px; /* Adjust padding top as needed */
+    margin-left: -8px;
+
+  }
+  
+  .logo {
+    margin-bottom: 20px;
+    
+    /* Add margin to create space between logo and list items */
+    margin-left: 40px;
+  }
+  
+  .logo img {
+   
+    width: 100px;
+    
+    margin-bottom: 50px;
+    margin-left: 8px;
+    margin-top: 56px;
+  }
+  
+  .sidebar ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .sidebar ul li {
+    padding: 10px 20px;
+    margin-bottom: 78px; /* Add margin bottom to create space between list items */
+    cursor: pointer;
+    font-size: 22px; /* Adjust font size as needed */
+    margin-left: 40px;
+  }
+  
+  .sidebar ul li:hover {
+    background-color: #555;
+  }
+  
